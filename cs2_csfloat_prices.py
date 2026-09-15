@@ -2119,8 +2119,8 @@ def main():
                 "item_tags": item_tags,
             },
         )
-        server = ThreadingHTTPServer(("127.0.0.1", args.port), handler_cls)
-        url = f"http://127.0.0.1:{args.port}/"
+        server = ThreadingHTTPServer(("0.0.0.0", args.port), handler_cls)
+        url = f"http://0.0.0.0:{args.port}/"
         print(f"\nSerwer działa pod adresem: {url}")
         print("Otwórz stronę (powinna się otworzyć sama) i kliknij 'Pobierz ceny ze Steam'.")
         print("Ten sposób NIE ma problemu z CORS - jedyne ryzyko to nadal ewentualna blokada Steam.")
